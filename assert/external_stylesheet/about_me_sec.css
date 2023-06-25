@@ -144,7 +144,7 @@ a:visited {
     display: inline;
     padding: 0;
 }
-@media all and (max-width: 720px) {
+@media all and (max-width: 720px) and (min-width: 0) {
     .bg-1 {
         height: 70vh;
         padding-top: 90px;
