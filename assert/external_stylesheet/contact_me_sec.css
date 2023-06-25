@@ -1,0 +1,229 @@
+/*@import url(https://fonts.googleapis.com/css?family=Lato:300,400,600);*/
+
+#contact_main_div{
+    display: flex;
+    justify-content: space-around;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+#contact_first_div{
+    width: 500px;
+}
+
+#contact_second_div{
+    width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.emoji {
+    max-width: 20px;
+    position: relative;
+    top: 4px;
+    margin: 0 3px;
+}
+
+.p-contact{
+    color: #FFA800;
+    opacity: 90%;
+}
+
+
+#contact_first_div{
+    color: black;
+    padding-top: 20px;
+    width: 30%;
+    margin-left: 50px;
+}
+
+/*input, textarea{*/
+/*    background-color: #4f5050;*/
+/*    color: white;*/
+/*}*/
+
+#contact_info_p{
+    line-height: 30px;
+}
+
+
+/*=====================================================================================*/
+
+/*body {*/
+/*    background: #262626;*/
+/*}*/
+.demopadding {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.icon {
+    position: relative;
+    text-align: center;
+    width: 0;
+    height: 0;
+    padding: 20px;
+    /*border-top-right-radius: 20px;*/
+    /*border-top-left-radius: 20px;*/
+    /*border-bottom-right-radius: 20px;*/
+    /*border-bottom-left-radius: 20px;*/
+    -moz-border-radius: 20px 20px 20px 20px;
+    -webkit-border-radius: 20px 20px 20px 20px;
+    color: #ffffff;
+}
+.icon i {
+    font-size: 20px;
+    position: absolute;
+    left: 9px;
+    top: 10px;
+}
+.icon.social {
+    float: left;
+    margin: 0 5px 0 0;
+    cursor: pointer;
+    background: whitesmoke;
+    color: #262626;
+    transition: 0.5s;
+    -moz-transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    border: 1px solid #FFA800;
+
+}
+.icon.social:hover {
+    background: white;
+    color: #6d6e71;
+    transition: 0.5s;
+    -moz-transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    /*-webkit-filter: drop-shadow(0 1px 10px rgba(0, 0, 0, 0.8));*/
+    /*filter: drop-shadow(0 1px 10px #FFA800);*/
+}
+.icon.social.fb i {
+    left: 13px;
+    top: 10px;
+}
+.icon.social.tw i {
+    left: 11px;
+}
+.icon.social.in i {
+    left: 11px;
+}
+
+#fb_icon, #tw_icon, #in_icon, #ig_icon, #gh_icon, #wa_icon{
+    margin-bottom: 5px;
+}
+
+
+#name, #email, #contact_no,#msg{
+    /*background-color: ;*/
+    color: black;
+    /*height: 30px;*/
+    width: 100%;
+    border-radius: 6px;
+    border: 1px solid grey;
+}
+
+#name, #email, #contact_no{
+    height: 30px;
+ }
+
+#msg{
+    height: 150px;
+}
+
+.nice-form{
+    width: 100%;
+    padding-right: 50px;
+    padding-left: 50px;
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    /*align-items: center;*/
+    /*justify-content: center;*/
+}
+
+/*===================================== submit button  ===========================================*/
+
+#submit_btn {
+    background-color: white;
+    width: 100px;
+    /*padding: 10px;*/
+    color: black;
+    border: 1px solid #FFA800;
+    font-size: 15px;
+    height: 30px;
+    border-radius: 30px;
+}
+
+
+#submit_btn:hover {
+    background: goldenrod;
+    color: white;
+}
+
+
+.btn_input-group{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#map{
+    opacity: 50%;
+    background-color: grey;
+}
+
+
+
+@media screen and (max-width: 1200px)  {
+    #contact_main_div{
+        margin-left: 10vw ;
+        margin-right: 10vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .demopadding {
+        display: flex;
+        flex-direction: row;
+        width: 60%;
+    }
+
+    #contact_first_div{
+        width: 70%;
+        text-align: center;
+        margin: 0;
+    }
+    #contact_second_div{
+        /*!*width: 30%;*!*/
+        /*padding-left: 10%;*/
+        /*padding-right: 10%;*/
+    }
+
+    #contact_third_div{
+        /*width: 70%;*/
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .p-contact{
+        font-size: 20px;
+    }
+
+    #contact_first_div h3{
+        width: 100%;
+        font-size: 30px;
+    }
+
+    #contact_main_div{
+        margin-left: 0 ;
+        margin-right: 0;
+    }
+
+
+}

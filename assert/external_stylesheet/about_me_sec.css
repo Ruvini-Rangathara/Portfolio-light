@@ -1,0 +1,194 @@
+
+::-webkit-scrollbar {
+    width: 0;
+    background-color: transparent;
+}
+
+#about_me_head{
+    padding: 0; !important;
+}
+
+.about-me p{
+    color: black;
+}
+
+.about-me{
+    /*padding-right: 50px;*/
+    padding-left: 50px;
+    width: 60%;
+}
+
+#nav-bar1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+.navbar-default {
+    height: 30px;
+    padding: 0px;
+}
+
+.navbar-link {
+    text-transform: uppercase;
+    padding: 0px 10px 0px 10px;
+}
+
+a:link,
+a:hover,
+a:active,
+a:visited {
+    text-decoration: none !important;
+}
+
+#about_me_para{
+    margin: 0;
+}
+
+#about_me_pic{
+    border: 1px solid #4f5050;
+    border-radius: 100%;
+    width: 250px;
+    height: fit-content;
+}
+
+#about_me_para_div{
+    width: 50%;
+    padding: 50px 30px 0px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: black;
+
+}
+#about_me_sec{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f4f0ec ;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    color: black;
+}
+
+#about_pic_div{
+    padding-bottom: 0; !important;
+}
+
+#about_me_para_div #my_name{
+    color: black;!important;
+}
+
+
+.my_name {
+    font-size: 50px;
+    word-spacing: 15px;
+    /*font-family: "Scope One", sans-serif;*/
+    color: #000;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+#my_position {
+    font-size: 20px;
+    word-spacing: 5px;
+    /*font-family: "Scope One", sans-serif;*/
+    color: #000;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+.my_name, #my_position {
+    font-family: "Scope One", sans-serif;
+}
+
+
+.selfie {
+    /*border: 1px solid black;*/
+    width: 250px;
+    height: fit-content;
+    padding-left: 50px;
+    /*border-radius: 100%;*/
+}
+
+.vertical-align {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bg-1 {
+    height: 75vh;
+    margin-top: 50px;
+    padding-top: 150px;
+    padding-bottom: 50px;
+    overflow: auto;
+}
+
+
+
+.bg-1 {
+    background: url("https://static.pexels.com/photos/54283/pexels-photo-54283.jpeg")
+    no-repeat center center fixed;
+    background-size: cover;
+}
+
+.no-padding {
+    padding: 0px !important;
+    margin: 0px !important;
+}
+
+.preview {
+    display: inline;
+    padding: 0px;
+}
+@media screen and (max-width: 720px) {
+    .bg-1 {
+        height: 70vh;
+        padding-top: 90px;
+    }
+
+    .my_name{
+        font-size: 35px ;
+    }
+
+    #my_name{
+        color: black;
+        font-size: 25px;
+    }
+
+    #my_position{
+        font-size: 20px;
+    }
+
+    #about_me_sec{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    #about_me_para_div{
+        width: 100%;
+        padding: 10px 30px 0px 30px;
+        /*display: flex;*/
+        /*flex-direction: column;*/
+        /*align-items: center;*/
+        /*justify-content: center;*/
+
+    }
+
+    #about_me_pic{
+        border: 1px solid #4f5050;
+        border-radius: 100%;
+        width: 200px;
+        height: fit-content;
+    }
+
+    #about_me_sec{
+        padding-top: 10px;
+    }
+}

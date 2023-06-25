@@ -1,0 +1,175 @@
+@import url("https://pro.fontawesome.com/releases/v6.0.0-beta1/css/all.css");
+@import url("https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap");
+
+
+h3 {
+    text-align: center;
+    color: black;
+}
+
+ol {
+    width: min(60rem, 90%);
+    margin-inline: auto;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+    list-style: none;
+    counter-reset: cardnr;
+    justify-content: center;
+}
+
+.edu_list {
+    border-radius: 33px 0px 0px 0px;
+    background-color: ghostwhite;
+    --frontColor: ghostwhite;
+    --width: 10em;
+    --inlineP: 0.5rem;
+    --borderR: 4rem;
+    --arrowW: 2rem;
+    --arrowH: 1.5rem;
+
+    counter-increment: cardnr;
+    width: calc(var(--width) - var(--inlineP) * 2);
+    display: grid;
+    grid-template:
+    "icon" var(--borderR)
+    "title"
+    "descr" 1fr;
+    margin-inline: var(--inlineP);
+    margin-bottom: calc(var(--borderR));
+    position: relative;
+}
+.edu_list .icon,
+.edu_list .title,
+.edu_list .descr {
+    background: var(--frontColor);
+    padding-inline: 1rem;
+    padding-bottom: 1rem;
+}
+.edu_list .icon,
+.edu_list .title {
+    color: var(--accent-color);
+    text-align: center;
+    padding-bottom: 0.5rem;
+}
+
+.edu_list .title,
+.edu_list .descr {
+    filter: drop-shadow(0.125rem 0.125rem 0.075rem rgba(0, 0, 0, 0.25));
+}
+.edu_list .icon {
+    grid-area: icon;
+    font-size: 2rem;
+    display: grid;
+    place-items: center;
+    border-radius: var(--borderR) 0 0 0;
+    position: relative;
+}
+
+.edu_list .title {
+    grid-area: title;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.edu_list .descr {
+    grid-area: descr;
+    font-size: 0.85rem;
+    text-align: center;
+}
+.edu_list .descr::before {
+    content: "";
+    width: var(--arrowW);
+    height: var(--arrowH);
+    position: absolute;
+    right: 1.5rem;
+    top: 100%;
+    background: inherit;
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+}
+
+.edu_list::after {
+    content: counter(cardnr, decimal-leading-zero);
+    position: absolute;
+    z-index: -1;
+
+    left: calc(var(--inlineP) * -1);
+    right: calc(var(--inlineP) * -1);
+    top: var(--borderR);
+    bottom: calc(var(--borderR) * -1);
+
+    display: flex;
+    align-items: flex-end;
+    background: var(--accent-color);
+    background-image: linear-gradient(
+            160deg,
+            rgba(255, 255, 255, 0.25),
+            transparent 75%,
+            rgba(0, 0, 0, 0.25)
+    );
+    border-radius: 0 0 var(--borderR) 0;
+
+    --pad: 1rem;
+    padding: var(--pad);
+    font-size: calc(var(--borderR) - var(--pad) * 2);
+    color: white;
+}
+.edu_list::before {
+    content: "";
+    position: absolute;
+    height: var(--borderR);
+    top: calc(100% + var(--borderR) - 2px);
+    left: calc(var(--inlineP) * -1);
+    right: calc(var(--inlineP) * -1);
+    border-radius: 0 var(--borderR) 0 0;
+
+    background-image: linear-gradient(var(--accent-color), transparent 60%);
+    opacity: 0.5;
+    filter: blur(2px);
+}
+
+.credits {
+    margin-top: 2rem;
+    text-align: right;
+}
+.credits a {
+    /*color: var(--color);*/
+}
+
+.icon img{
+    position: relative;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+#id-education{
+    background-color: #f2f3f4;
+    margin-right: 10vw;
+    margin-left: 10vw;
+    padding-top: 5vh;
+}
+
+.edu_list .icon{
+    width: 10px;
+    height: 10px;
+}
+
+@media screen and (max-width: 720px) {
+    .edu_list{
+        width: 180px;
+        height: 250px;
+    }
+
+    .edu_list .descr{
+        font-size: 15px;
+    }
+
+    .edu_list .title{
+        font-size: 18px;
+    }
+}

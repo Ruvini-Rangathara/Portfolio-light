@@ -1,0 +1,265 @@
+@import url("https://fonts.googleapis.com/css?family=Cardo:400i|Rubik:400,700&display=swap");
+/*:root {*/
+/*    --d: 700ms;*/
+/*    --e: cubic-bezier(0.19, 1, 0.22, 1);*/
+/*    !*--font-sans: "Rubik", sans-serif;*!*/
+/*    !*--font-serif: "Cardo", serif;*!*/
+/*}*/
+
+
+
+.page-content {
+    display: grid;
+    grid-gap: 1rem;
+    color: black;
+    /*background-color: #4f5050;*/
+    justify-content: center;
+    align-items: center;
+    padding: 20px 60px 60px 60px;
+    margin-right: 10vw;
+    margin-left: 10vw;
+}
+
+
+.assignment_card {
+    border: 1px solid #9c7c38;
+    /*border-radius: 5px;*/
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+    padding: 1rem;
+    width: 100%;
+    text-align: center;
+    color: black;
+    background-color: white;
+    /*box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.1), 0 4px 4px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.1), 0 16px 16px rgba(0, 0, 0, 0.1);*/
+}
+
+.assignment_card:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 110%;
+    background-size: cover;
+    background-position: 0 0;
+    /*transition: transform calc(var(--d) * 1.5) var(--e);*/
+    pointer-events: none;
+    box-shadow: 1px 1px 3px 2px navajowhite;
+}
+.assignment_card:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200%;
+    pointer-events: none;
+    /*background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.009) 11.7%, rgba(0, 0, 0, 0.034) 22.1%, rgba(0, 0, 0, 0.072) 31.2%, rgba(0, 0, 0, 0.123) 39.4%, rgba(0, 0, 0, 0.182) 46.6%, rgba(0, 0, 0, 0.249) 53.1%, rgba(0, 0, 0, 0.32) 58.9%, rgba(0, 0, 0, 0.394) 64.3%, rgba(0, 0, 0, 0.468) 69.3%, rgba(0, 0, 0, 0.54) 74.1%, rgba(0, 0, 0, 0.607) 78.8%, rgba(0, 0, 0, 0.668) 83.6%, rgba(0, 0, 0, 0.721) 88.7%, rgba(0, 0, 0, 0.762) 94.1%, rgba(0, 0, 0, 0.79) 100%);*/
+    transform: translateY(-50%);
+    /*transition: transform calc(var(--d) * 2) var(--e);*/
+}
+.assignment_card:before {
+    background-color: white;
+}
+
+.content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    /*padding: 1rem;*/
+    /*transition: transform var(--d) var(--e);*/
+    z-index: 1;
+}
+.content > * + * {
+    margin-top: 1rem;
+}
+
+.title {
+    font-size: 1.3rem;
+    font-weight: normal;
+    line-height: 1.2;
+    margin: 0;
+    color: black;
+    opacity: 75%;
+}
+
+.copy {
+    /*font-family: var(--font-serif);*/
+    font-size: 1.125rem;
+    /*font-style: italic;*/
+    line-height: 1.35;
+    margin: 10px;
+}
+
+.btn {
+    cursor: pointer;
+    /*margin-top: 1.5rem;*/
+    padding: 0.5rem ;
+    font-size: 0.8rem;
+    font-weight: normal;
+    letter-spacing: 0.025rem;
+    text-transform: uppercase;
+    background-color: white;
+    border: 1px solid #FFA800;
+    /*border: none;*/
+    width: 50px;
+    border-radius: 10px;
+    margin: 0;
+    color: black;
+}
+.btn:hover {
+    background-color: goldenrod;
+    color: white;
+}
+/*.btn:focus {*/
+/*    outline: 1px dashed yellow;*/
+/*    outline-offset: 3px;*/
+/*}*/
+
+
+
+#my_assignment {
+    /*margin: 25px 0;*/
+    text-align: center;
+    font-size: 2.75em;
+    opacity: 75%;
+}
+
+
+@media (hover: hover)  {
+    .assignment_card:after {
+        transform: translateY(0);
+    }
+
+    .content {
+        transform: translateY(calc(100% - 4.5rem));
+    }
+    .content > *:not(.title) {
+        opacity: 0;
+        transform: translateY(1rem);
+        /*transition: transform var(--d) var(--e), opacity var(--d) var(--e);*/
+    }
+
+    .assignment_card:hover,
+    .assignment_card:focus-within {
+        align-items: center;
+    }
+    .assignment_card:hover:before,
+    .assignment_card:focus-within:before {
+        transform: translateY(-4%);
+    }
+    .assignment_card:hover:after,
+    .assignment_card:focus-within:after {
+        transform: translateY(-50%);
+    }
+    .assignment_card:hover .content,
+    .assignment_card:focus-within .content {
+        transform: translateY(0);
+    }
+    .assignment_card:hover .content > *:not(.title),
+    .assignment_card:focus-within .content > *:not(.title) {
+        opacity: 1;
+        transform: translateY(0);
+        /*transition-delay: calc(var(--d) / 8);*/
+    }
+
+    .assignment_card:focus-within:before, .card:focus-within:after,
+    .assignment_card:focus-within .content,
+    .assignment_card:focus-within .content > *:not(.title) {
+        transition-duration: 0s;
+    }
+}
+
+
+@media screen and (min-width: 720px) {
+    .page-content {
+        grid-template-columns: repeat(4, 1fr);
+        margin-right:50px ;
+        margin-left: 50px;
+
+    }
+    .title{
+        font-size: 20px;
+    }
+
+    .btn{
+        width: 120px;
+        font-size: 17px;
+    }
+
+    .copy{
+        font-size: 17px;
+    }
+
+    .page-content .assignment_card{
+        width: 100%;
+        height: 150px;
+    }
+}
+/*@media screen and (max-width: 720px) {*/
+
+/*    .page-content {*/
+/*        margin-left: 0;*/
+/*        margin-right: 0;*/
+/*        grid-template-columns: repeat(2, 1fr);*/
+/*    }*/
+
+/*    .title{*/
+/*        font-size: 20px;*/
+/*    }*/
+
+/*    .copy{*/
+/*        font-size: 17px;*/
+/*    }*/
+
+/*    .btn{*/
+/*        width: 120px;*/
+/*        font-size: 12px;*/
+/*    }*/
+
+/*    .page-content .assignment_card{*/
+/*        width: 100%;*/
+/*        height: 150px;*/
+/*    }*/
+
+/*}*/
+
+/*@media screen and (min-width: 600px) {*/
+/*    .assignment_card {*/
+/*        height: 150px;*/
+/*    }*/
+/*}*/
+
+@media screen and (min-width: 300px) and (max-width: 400px) {
+
+    .page-content {
+        margin-left: 0;
+        margin-right: 0;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .title{
+        font-size: 32px;
+    }
+
+    .copy{
+        font-size: 29px;
+    }
+
+    .btn{
+        width: 120px;
+        font-size: 25px;
+    }
+
+    .page-content .assignment_card{
+        width: 100%;
+        height: 200px;
+    }
+
+}
