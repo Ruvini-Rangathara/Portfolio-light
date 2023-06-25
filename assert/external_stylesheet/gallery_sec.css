@@ -140,7 +140,7 @@
 
 @media screen and (min-width: 768px) {
     .section1 {
-        padding: 3rem;
+        padding: 2rem;
     }
 }
 @supports (display: grid) {
@@ -153,6 +153,13 @@
     .item--full {
         grid-column: 1/-1;
         grid-row-end: span 2;
+    }
+}
+
+@media all and (max-width: 720px) {
+    .section1{
+        margin: 20px;
+        padding: 0;
     }
 }
 

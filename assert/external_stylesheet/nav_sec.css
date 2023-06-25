@@ -4,14 +4,18 @@
 #n {
 
     /*background-color:#4f5050;!important;*/
-    background-color:#2a2727;!important;
+    /*background-color:#2a2727;!important;*/
     padding: 0;
     position: fixed;
     width: 100%;
-    z-index: 1000;
+    z-index: 10000;
     height: fit-content;
     right: 0;
     top: 0;!important;
+}
+
+#nav_my_name{
+    width: fit-content;
 }
 
 
@@ -19,7 +23,7 @@
     font-size: 15px;
     margin-bottom: 0;
     color: white;
-    margin-right: 80px;
+    /*margin-right: 80px;*/
 }
 
 #hamburger_id{
@@ -46,6 +50,7 @@
     background-color: #2a2727;!important;
     width: 100%;
     height: 50px;
+    padding: 0;!important;
 }
 
 .section_head{
@@ -92,13 +97,13 @@
 
 /*=========================================      Animation        ==============================================*/
 
-@import url("https://fonts.googleapis.com/css?family=Syncopate");
+/*@import url("https://fonts.googleapis.com/css?family=Syncopate");*/
 
 
-html {
-    /* subtlepatterns.com */
-    background: url("http://neilcarpenter.com/demos/asfalt.png") repeat;
-}
+/*html {*/
+/*    !* subtlepatterns.com *!*/
+/*    !*background: url("http://neilcarpenter.com/demos/asfalt.png") repeat;*!*/
+/*}*/
 /*body {*/
 /*    background: radial-gradient(*/
 /*            ellipse at center,*/
@@ -231,4 +236,8 @@ article.fly-in-out {
         box-shadow: 0 0 100px 100px rgba(255, 255, 255, 0.2);
         border-radius: 50%;
     }
+}
+
+@media all and (max-width: 720px) {
+
 }
