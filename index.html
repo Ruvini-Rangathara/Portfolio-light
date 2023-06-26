@@ -106,6 +106,16 @@
         }
 
     </style>
+
+    <script type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+    <script type="text/javascript">
+        (function (){
+            emailjs.init('IpQJuogsnh69wOXeA');
+        })();
+    </script>
+    <script src="assert/script.js" type="text/javascript"></script>
 </head>
 <body>
 
@@ -872,7 +882,7 @@
                 </div>
                 <br>
                 <div class="btn_input-group">
-                    <button id="submit_btn">Submit</button>
+                    <button id="submit_btn" onclick="sendMail()">Submit</button>
                 </div>
                 <br>
                 <br>
@@ -1034,6 +1044,7 @@
 <script>
     AOS.init();
 </script>
+
 
 
 </body>
